@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "fixedpoint.h"
 
+#define TEST_INT	0
 #define CALC_DIV	1
 
 #define CALC_REPEAT	0xffff	// Excelの最大行
@@ -44,11 +45,15 @@ void calc(double dx, double dy)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	/*
-	fp32 fv = double_to_fp32(127.0);
-	printf("%lf\t%d\n", fp32_to_double(fv), fv);
-	*/
-
+#if TEST_INT
+	// 整数のテスト
+	printf("fp32_to_double\tfp32_to_int\tinner\n");
+	for (int i = -128; i < 128; i++) {
+		fp32 fv = int_to_fp32(i);
+		printf("%lf\t%d\t%d\n", fp32_to_double(fv), fp32_to_int(fv), fv);
+	}
+#else
+	// 浮動小数点のテスト
 	printf("expr\tdouble\tfp32\terr\n");
 	calc(1.0f, -1.0f);
 	
@@ -60,7 +65,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			continue;
 		calc(dx, dy);
 	}
-
+#endif
 	return 0;
 }
 

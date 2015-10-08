@@ -9,6 +9,8 @@ typedef int64_t fp64;
 #define FIXQ				(24u)
 #define double_to_fp32(x)	((fp32)((1u<<FIXQ)*((double)x)))
 #define fp32_to_double(x)	(((double)(x))/(1u<<FIXQ))
+#define int_to_fp32(x)		((fp32)(((int32_t)(x))<<FIXQ))
+#define fp32_to_int(x)		(((int32_t)(x))>>FIXQ)
 // 四則演算
 // オーバーフローに注意
 // 特に除算の除数
