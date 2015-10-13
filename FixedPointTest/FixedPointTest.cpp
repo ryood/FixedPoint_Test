@@ -1,5 +1,7 @@
 // FixedPointTest.cpp : Defines the entry point for the console application.
 //
+// 2015.10.11 Q16.16でテスト
+// 2015.10.08 Q8.24でテスト
 
 #include "stdafx.h"
 
@@ -8,10 +10,12 @@
 #include "fixedpoint.h"
 
 #define TEST_INT	0
-#define CALC_DIV	1
+#define CALC_DIV	0
 
 #define CALC_REPEAT	0xffff	// Excelの最大行
-#define	FP32_MAX	(1.0f)
+#define	FP32_MAX	(128.0f)
+#define INT_MAX		127
+#define INT_MIN		-128
 
 double dbl_rand()
 {
@@ -48,14 +52,14 @@ int _tmain(int argc, _TCHAR* argv[])
 #if TEST_INT
 	// 整数のテスト
 	printf("fp32_to_double\tfp32_to_int\tinner\n");
-	for (int i = -128; i < 128; i++) {
+	for (int i =INT_MIN; i < INT_MAX; i++) {
 		fp32 fv = int_to_fp32(i);
-		printf("%lf\t%d\t%d\n", fp32_to_double(fv), fp32_to_int(fv), fv);
+		printf("%d\t%lf\t%d\t%d\n", i, fp32_to_double(fv), fp32_to_int(fv), fv);
 	}
 #else
 	// 浮動小数点のテスト
 	printf("expr\tdouble\tfp32\terr\n");
-	calc(1.0f, -1.0f);
+	calc(INT_MAX, INT_MIN);
 	
 	for (int i = 0; i < CALC_REPEAT; i++) {
 		double dx = dbl_rand();
