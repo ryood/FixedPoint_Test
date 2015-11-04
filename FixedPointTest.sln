@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FixedPointTest", "FixedPointTest\FixedPointTest.vcxproj", "{9D449453-99F0-49C6-BC8E-FCBA769CAD69}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FixedPoint16bitTest", "FixedPoint16bitTest\FixedPoint16bitTest.vcxproj", "{27BFC156-13C9-460E-9FFE-948B048CEB7E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FixedPointRandTest", "FixedPointRandTest\FixedPointRandTest.vcxproj", "{102B5EF0-162E-4E05-A79D-2C6207037540}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +19,14 @@ Global
 		{9D449453-99F0-49C6-BC8E-FCBA769CAD69}.Debug|Win32.Build.0 = Debug|Win32
 		{9D449453-99F0-49C6-BC8E-FCBA769CAD69}.Release|Win32.ActiveCfg = Release|Win32
 		{9D449453-99F0-49C6-BC8E-FCBA769CAD69}.Release|Win32.Build.0 = Release|Win32
+		{27BFC156-13C9-460E-9FFE-948B048CEB7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27BFC156-13C9-460E-9FFE-948B048CEB7E}.Debug|Win32.Build.0 = Debug|Win32
+		{27BFC156-13C9-460E-9FFE-948B048CEB7E}.Release|Win32.ActiveCfg = Release|Win32
+		{27BFC156-13C9-460E-9FFE-948B048CEB7E}.Release|Win32.Build.0 = Release|Win32
+		{102B5EF0-162E-4E05-A79D-2C6207037540}.Debug|Win32.ActiveCfg = Debug|Win32
+		{102B5EF0-162E-4E05-A79D-2C6207037540}.Debug|Win32.Build.0 = Debug|Win32
+		{102B5EF0-162E-4E05-A79D-2C6207037540}.Release|Win32.ActiveCfg = Release|Win32
+		{102B5EF0-162E-4E05-A79D-2C6207037540}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
